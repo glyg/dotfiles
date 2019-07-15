@@ -21,7 +21,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (blacken yasnippet-snippets weechat yasnippet yaml-mode writeroom-mode scad-mode python-mode neotree multiple-cursors markdown-preview-eww markdown-mode+ jedi flycheck find-file-in-repository cython-mode autopair anaconda-mode)))
+    (## magit git blacken yasnippet-snippets weechat yasnippet yaml-mode writeroom-mode scad-mode python-mode neotree multiple-cursors markdown-preview-eww markdown-mode+ jedi flycheck find-file-in-repository cython-mode autopair anaconda-mode)))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(tool-bar-mode nil))
@@ -72,7 +72,7 @@
   (visual-line-mode 1)
   (visual-fill-column-mode t))
 (add-hook 'markdown-mode-hook 'md-vlm-mode-hook)
-(add-hook 'LaTex-mode-hook 'md-vlm-mode-hook)
+(add-hook 'LaTeX-mode-hook 'md-vlm-mode-hook)
 
 
 ;; Remove trailing whitespaces
@@ -140,8 +140,6 @@
 (setq py-electric-colon-active t)
 (add-hook 'python-mode-hook 'electric-pair-mode)
 (add-hook 'python-mode-hook 'yas-minor-mode)
-
-
 (add-hook 'python-mode-hook 'anaconda-mode)
 (add-hook 'python-mode-hook 'blacken-mode)
 

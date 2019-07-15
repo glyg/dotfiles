@@ -30,11 +30,10 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
   (color-theme-install
    `(color-theme-solarized () () ,@(solarized-color-definitions))))
 
-(when (boundp 'color-themes)
-  (add-to-list 'color-themes
-               `(color-theme-solarized
-                 "Solarized"
-                 ,solarized-description)))
+(add-to-list 'color-themes
+             `(color-theme-solarized
+               "Solarized"
+               ,solarized-description))
 
 ;;;###autoload
 (defun color-theme-solarized-dark ()

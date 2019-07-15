@@ -215,8 +215,6 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
           ;; FIXME: don’t hardcode the SRGB color names
           (fmt-curl-red    `(                        :underline (:color "#dc322f" :style wave)))
           (fmt-curl-yellow `(                        :underline (:color "#b58900" :style wave)))
-          (fmt-curl-magenta `(                       :underline (:color "#d33682" :style wave)))
-          (fmt-curl-cyan `(                          :underline (:color "#2aa198" :style wave)))
           (fmt-ital   `(              :slant ,italic))
           ;; FIXME: not quite the same
           (fmt-stnd   `(                                                   :inverse-video t))
@@ -702,11 +700,6 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (whitespace-trailing (,@fmt-bold ,@fg-red ,@bg-base02))
                 (whitespace-highlight-face (,@fg-red ,@bg-blue))
                 (whitespace-line (,@fg-magenta))
-                (whitespace-newline (:inherit shadow :slant normal))
-                ;; writegood
-                (writegood-weasels-face (,@fmt-curl-cyan ,@fg-cyan))
-                (writegood-passive-voice-face (,@fg-magenta))
-                (writegood-duplicates-face (:inherit error))
                 ;; rcirc
                 (rcirc-my-nick (,@fg-blue))
                 (rcirc-nick-in-message (,@fg-orange))
@@ -729,14 +722,14 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (rst-level-5 (:inherit outline-5))
                 (rst-level-6 (:inherit outline-6))
                 ;;ansi-term
-                (term-color-black (,@fg-base02 ,@bg-base02))
-                (term-color-red (,@fg-red ,@bg-red))
-                (term-color-green (,@fg-green ,@bg-green))
-                (term-color-yellow (,@fg-yellow ,@bg-yellow))
-                (term-color-blue (,@fg-blue ,@bg-blue))
-                (term-color-magenta (,@fg-magenta ,@bg-magenta))
-                (term-color-cyan (,@fg-cyan ,@bg-cyan))
-                (term-color-white (,@fg-base00 ,@bg-base00))
+                (term-color-black (,@fg-base02))
+                (term-color-red (,@fg-red))
+                (term-color-green (,@fg-green))
+                (term-color-yellow (,@fg-yellow))
+                (term-color-blue (,@fg-blue))
+                (term-color-magenta (,@fg-magenta))
+                (term-color-cyan (,@fg-cyan))
+                (term-color-white (,@fg-base00))
                 ;; company
                 (company-tooltip (,@fg-base00 ,@bg-base02))
                 (company-tooltip-selection (,@fg-green ,@bg-base02))
@@ -775,9 +768,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (undo-tree-visualizer-default-face (:inherit shadow))
                 (undo-tree-visualizer-active-branch-face (:inherit default))
                 (undo-tree-visualizer-unmodified-face (,@fg-cyan))
-                (undo-tree-visualizer-register-face (,@fg-yellow))
-                ;; haskell
-                (haskell-keyword-face (,@fg-cyan)))))))
+                (undo-tree-visualizer-register-face (,@fg-yellow)))))))
 
 ;;;###autoload
 (when (boundp 'custom-theme-load-path)
